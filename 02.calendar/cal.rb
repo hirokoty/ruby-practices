@@ -14,8 +14,9 @@ days_in_month = Date.new(year, month, -1).day
 
 month_name = first_date.strftime('%B')
 header = "#{month_name} #{year}"
-puts header.center(20)
-puts 'Su Mo Tu We Th Fr Sa'
+wdays = 'Su Mo Tu We Th Fr Sa'
+puts header.center(wdays.length)
+puts wdays
 days = Array.new(first_date.wday, '  ') + (1..days_in_month).map { |d| d.to_s.rjust(2) }
 days.each_slice(7) do |week|
   puts week.join(' ')
