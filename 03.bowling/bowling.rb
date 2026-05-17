@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-TOTAL_PINS = 10          # フレームの総ピン数
+TOTAL_PINS = 10 # フレームの総ピン数
 
 input = ARGV[0]
 shots = input.split(',').map { |s| s == 'X' ? TOTAL_PINS : s.to_i }
